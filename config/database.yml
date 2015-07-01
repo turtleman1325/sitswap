@@ -81,8 +81,8 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: sitswap_production
-  username: sitswap
-  password: <%= ENV['SITSWAP_DATABASE_PASSWORD'] %>
+#production:
+#  <<: *default
+#  database: sitswap_production
+#  username: sitswap
+#  password: <%= ENV['SITSWAP_DATABASE_PASSWORD'] %>

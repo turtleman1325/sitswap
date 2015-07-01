@@ -1,0 +1,32 @@
+<% if @pet.errors.any? %>
+    <ul>
+      <% @pet.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+      <% end %>
+    </ul>
+<% end %>
+<h1>Pet(s)</h1>
+<%= form_for @pet do |f| %>
+    <label>Name<%= f.text_field :title %></label><%= error_messages_on @pet, :title %><br>
+    <label>Body<%= f.text_area :body, rows: 8, cols: 40 %></label><%= error_messages_on @pet, :body %><br>
+    <input type="submit" name="submit" value="Pet!">
+<% end %>
+
+
+
+
+
+<!--create_table :pets do |t|-->
+<!--t.string :name-->
+<!--t.integer :user_id-->
+<!--t.string :pet_type-->
+<!--t.string :breed-->
+<!--t.string :color-->
+<!--t.boolean :female-->
+<!--t.boolean :spayed_neutered-->
+<!--t.integer :birth_year-->
+<!--t.date :rabies_vaccination-->
+<!--t.date :bordetella_vaccination-->
+<!--t.text :medications-->
+<!--t.text :feeding-->
+<!--t.text :notes-->

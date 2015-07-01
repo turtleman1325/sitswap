@@ -1,5 +1,5 @@
 class Pet < ActiveRecord::Base
-  has_and_belongs_to_many :categories
+  belongs_to :categories
 
-  validates :title, presence: true, length: { minimum: 10 }
+  validates :name, presence: true
 end

@@ -3,6 +3,7 @@ class CreatePets < ActiveRecord::Migration
     create_table :pets do |t|
       t.string :name
       t.integer :user_id
+      t.string :pet_type
       t.string :breed
       t.string :color
       t.boolean :female

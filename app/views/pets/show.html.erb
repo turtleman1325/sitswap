@@ -1,0 +1,11 @@
+<h1><%= @pet.title %></h1>
+<p>
+  <%= @pet.body %>
+</p>
+<ul>
+  <% @pet.categories.each do |category| %>
+      <li><%= link_to category.name, category %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Back', '/pets' %>&nbsp;<%= link_to 'Edit', "/pets/#{@pet.id}/edit" %>

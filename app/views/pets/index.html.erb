@@ -1,0 +1,6 @@
+<table>
+  <% @pets.each do |pet| %>
+      <tr><td><%= link_to pet.title, "/pets/#{pet.id}" %></td><td><%= button_to 'X', "/posts/#{post.id}", method: 'delete' %></tr>
+  <% end %>
+</table>
+<%= button_to 'New', '/pets/new', method: :get %>

@@ -1,0 +1,7 @@
+<%= @category.pet_type %><br>
+<ul>
+  <% @category.pets.each do |pet| %>
+      <li><%= link_to pet.name, pet %></li>
+  <% end %>
+</ul>
+<%= link_to 'Back', '/categories' %>&mdash;<%= link_to 'Edit', "/categories/#{@category.id}/edit" %>
