@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails sitswap: development" uuid="7aff5054-7aa4-4af7-af88-a8134601185d">
+      <user-name>artistTK</user-name>
+      <user-password>dfdedfc1dfdadfc5dfd9dfde</user-password>
+      <schema-pattern>sitswap_development.pg_catalog sitswap_development.public</schema-pattern>
+      <default-schemas>sitswap_development.pg_catalog sitswap_development.public</default-schemas>
+    </data-source>
+    <data-source name="Rails sitswap: test" uuid="96265c6f-52a8-4601-9f08-8f19a589cd81">
+      <user-name>artistTK</user-name>
+      <user-password>dfdedfc1dfdadfc5dfd9dfde</user-password>
+      <schema-pattern>sitswap_test.pg_catalog sitswap_test.public</schema-pattern>
+      <default-schemas>sitswap_test.pg_catalog sitswap_test.public</default-schemas>
+    </data-source>
+    <data-source name="Rails sitswap: production" uuid="c171ea6b-c3c3-47e0-a87f-89b36dd9a1ca">
+      <first-sync>true</first-sync>
+      <user-name>sitswap</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddff9dfe3dffedff9dffddfebdffadff5dfeedfebdffedfebdfe8dfebdff9dfefdff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
+    </data-source>
+  </component>
+</project>
