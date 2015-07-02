@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   get "contact" => "welocme#contact", as: :contact
   get "log in" => "login#login", as: :log_in
   root 'welcome#index'
-  devise_for :users
-
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  
   resources :pets
 
   # Example of regular route:
