@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   root 'welcome#index'
   devise_for :users
 
+  resources :pets
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
