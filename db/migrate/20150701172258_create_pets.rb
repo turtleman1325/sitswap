@@ -10,7 +10,13 @@ class CreatePets < ActiveRecord::Migration
       t.boolean :spayed_neutered
       t.integer :birth_year
       t.date :rabies_vaccination
-      t.date :bordetella_vaccination
+      t.date :flea_tick_application
+      t.date :fecal_test
+      t.date :dog_bordetella_vaccination
+      t.date :dog_dhpp_vaccination
+      t.date :cat_fvrcp_vaccination
+      t.date :cat_felv/fiv_test
+      t.date :cat_leukemia_test
       t.text :medications
       t.text :feeding
       t.text :notes
