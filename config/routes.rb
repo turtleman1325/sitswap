@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   get "log in" => "login#login", as: :log_in
   root 'welcome#index'
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
-  
   resources :pets
 
   # Example of regular route:

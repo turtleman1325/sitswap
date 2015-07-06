@@ -1,4 +1,7 @@
 <h1>Sit Swap</h1>
 <h3>Watch my pet</h3>
 
-<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+<%= link_to image_tag('https://www.roverpass.com/assets/user/login-with-facebook-ecfd69123f7f6f6b6b1e546bb60726e1.png', width: 200, height: 40), user_omniauth_authorize_path(:facebook) %>
+<br>
+<br>
+<%= link_to image_tag('https://readwithmeapp.com/images/sign-in-with-google.png', width: 200, height: 40), user_omniauth_authorize_path(:google_oauth2) %>

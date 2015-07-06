@@ -10,6 +10,7 @@ Devise.setup do |config|
   # config.secret_key = '793f7fe77a3b5e6b38f141c61b5b191db8b3aa534f40e4efa5a5776744c8992c16328d9556d1c59713dfd0f02ca0c9ac99125be34b3457c724ff107d67ad86b0'
   config.omniauth :facebook, "464014777114258", "3106c9a03bd410ce975b9e224005ef60"
 
+  config.omniauth :google_oauth2, "607107594518-k5djek35m7kcas1ddldb62hd1v7f0r9f.apps.googleusercontent.com", "4HY33BL_felmJgoEHj4hP3ee"
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
