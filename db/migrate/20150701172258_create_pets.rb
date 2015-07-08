@@ -5,8 +5,8 @@ class CreatePets < ActiveRecord::Migration
       t.integer  :user_id
       t.string   :breed
       t.string   :color
-      t.boolean  :female
-      t.boolean  :spayed_neutered
+      t.boolean  :female, default: true
+      t.boolean  :spayed_neutered, default: true
       t.integer  :birth_year
       t.text     :feeding
       t.text     :medications

@@ -7,16 +7,19 @@
 <% end %>
 <h1>Pet(s)</h1>
 <%= form_for @pet do |f| %>
-    <label>Name<%= f.text_field :name %></label><%= error_messages_on @pet, :name %><br>
-    <label>Breed<%= f.text_field :breed %></label><%= error_messages_on @pet, :breed %><br>
-    <label>Color<%= f.text_field :color %></label><%= error_messages_on @pet, :color %><br>
+    <label>Name<%= f.text_field :name %></label>
+    <label>Breed<%= f.text_field :breed %></label>
+    <label>Color<%= f.text_field :color %></label>
 
-    <div><%= label :female, "Female?" %>
-      <% f.radio_button :access_rights, false, :checked => true, :value => false %></div>
+    <div><%= f.label :female, "Gender" %>
+      <%= f.radio_button :female, true%>
+      <%= f.label :female_true, "Female"%>
+      <%= f.radio_button :female, false%>
+      <%= f.label :female_false, "Male"%>
+    </div>
       <br>
 
-    <%= f.text_area :body, rows: 8, cols: 40 %></label><%= error_messages_on @pet, :body %><br>
-    <label>
+
     <%= render partial: 'category_picker' %>
     <input type="submit" name="submit" value="Pet!">
 <% end %>

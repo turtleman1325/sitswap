@@ -3,10 +3,27 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+  #"/"
   root 'welcome#index'
-  get "pets" => "pets#index", as: :profile
 
-  resources :pets
+  resources :pets do
+    # "/pets/5/preview"
+    # member do
+    #   get :preview
+    # end
+    # "/pets/destroy?user_id=5"
+    # collection do
+    #   delete :epic_destroy, as: 'destroy'
+    # end
+  end
+  # get "pets" => 'pets#index'
+  # get "pets/new" => 'pets#new'
+  # get "pets/:id/edit" => 'pets#edit'
+  # get "pets/:id" => 'pets#show'
+  # post "pets" => 'pets#create'
+  # patch "pets/:id" => 'pets#update'
+  # delete "pets/:id" => 'pets#destroy'
+
   resources :categories
 
   # Example of regular route:

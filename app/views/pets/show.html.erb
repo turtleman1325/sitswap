@@ -1,11 +1,9 @@
-<h1><%= @pet.title %></h1>
+<h1><%= @pet.name %></h1>
 <p>
-  <%= @pet.body %>
+  <%= @pet.breed %>
 </p>
-<ul>
-  <% @pet.categories.each do |category| %>
-      <li><%= link_to category.name, category %></li>
-  <% end %>
-</ul>
+<p>
+  <%= @pet.female ? "Female" : "Male" %>
+</p>
 
 <%= link_to 'Back', '/pets' %>&nbsp;<%= link_to 'Edit', "/pets/#{@pet.id}/edit" %>

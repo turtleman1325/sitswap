@@ -4,11 +4,19 @@ class PetsController < ApplicationController
   end
 
   def create
-    @pet = Pet.new params[:pet]
+    @pet = Pet.new pet_params
+    if @pet.save
+      # @pet.category_ids = params[:categories]
+      redirect_to "/pets/#{@pet.id}"
+    else
+      render 'new'
+    end
+    #if successful go to show
+    #if failed to save go back to new
   end
 
   def index
-    @pets = Pet.find params[:id]
+    @pets = Pet.all
   end
 
   def show
@@ -25,5 +33,11 @@ class PetsController < ApplicationController
 
   def update
     @pet = Pet.find params[:id]
+  end
+
+  private
+
+  def pet_params
+    params.require(:pet).permit!
   end
 end
