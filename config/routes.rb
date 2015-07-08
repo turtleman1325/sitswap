@@ -1,16 +1,15 @@
 Rails.application.routes.draw do
-  resources :user_profiles
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index '
-  get "about" => "welocme#about", as: :about
-  get "contact" => "welocme#contact", as: :contact
+  get "about" => "welcome#about", as: :about
+  get "contact" => "welcome#contact", as: :contact
   get "log in" => "login#login", as: :log_in
   root 'welcome#index'
-  devise_for :users
-
+  devise_for :users, controllers: {registrations: 'registrations'}
+  resources :users, :only => [:show]
   resources :pets
 
   # Example of regular route:
