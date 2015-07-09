@@ -1,9 +1,43 @@
-<h1><%= @pet.name %></h1>
+<h1>Your Pet</h1>
+<h2><%= @pet.name %></h2>
 <p>
   <%= @pet.breed %>
 </p>
 <p>
+  <%= @pet.color %>
+</p>
+<p>
   <%= @pet.female ? "Female" : "Male" %>
 </p>
+<p>
+  <%= @pet.spayed_neutered ? "Yes" : "No" %>
+</p>
+<p>
+  <%= @pet.birth_year %>
+</p>
+<p>
+  <%= @pet.feeding %>
+</p>
+<p>
+  <%= @pet.medications %>
+</p>
+<p>
+  <%= @pet.vaccinations %>
+</p>
+<p>
+  <%= @pet.vaccination_medical_notes %>
+</p>
+<p>
+  <%= @pet.flea_tick_application %>
+</p>
+<p>
+  <%= @pet.temperament %>
+</p>
+<p>
+  <%= @pet.notes %>
+</p>
 
-<%= link_to 'Back', '/pets' %>&nbsp;<%= link_to 'Edit', "/pets/#{@pet.id}/edit" %>
+<%= link_to 'Pets', '/pets' %>
+&nbsp;
+&nbsp;
+<%= link_to 'Edit', "/pets/#{@pet.id}/edit" %>

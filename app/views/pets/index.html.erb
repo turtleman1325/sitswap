@@ -1,6 +1,16 @@
 <table>
   <% @pets.each do |pet| %>
-      <tr><td><%= link_to pet.name, "/pets/#{pet.id}" %></td><td><%= button_to 'Delete', "/pets/#{pet.id}", method: 'delete' %></tr>
+      <tr>
+        <td>
+          <%= link_to pet.name, "/pets/#{pet.id}" %>
+        </td>
+        <td>
+          <%= button_to 'Delete', "/pets/#{pet.id}", method: 'delete' %>
+        </td>
+        <td>
+          <%= button_to 'Edit', "/pets/#{pet.id}/edit", method: 'get' %>
+        </td>
+      </tr>
   <% end %>
 </table>
 <%= button_to 'New', '/pets/new', method: :get %>

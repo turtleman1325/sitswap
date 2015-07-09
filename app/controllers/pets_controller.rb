@@ -25,6 +25,11 @@ class PetsController < ApplicationController
 
   def destroy
     @pet = Pet.find params[:id]
+    if @pet.destroy
+      redirect_to '/pets'
+    else
+      redirect_to :back
+    end
   end
 
   def edit
@@ -33,6 +38,11 @@ class PetsController < ApplicationController
 
   def update
     @pet = Pet.find params[:id]
+    if @pet.update pet_params
+      redirect_to "/pets/#{@pet.id}"
+    else
+      render 'edit'
+    end
   end
 
   private

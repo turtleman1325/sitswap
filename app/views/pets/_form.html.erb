@@ -1,14 +1,19 @@
 <% if @pet.errors.any? %>
     <ul>
       <% @pet.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
+          <li>
+          <%= msg %>
+          </li>
       <% end %>
     </ul>
 <% end %>
 <%= form_for @pet do |f| %>
-    <label>Name<%= f.text_field :name %></label><br>
-    <label>Breed<%= f.text_field :breed %></label><br>
-    <label>Color<%= f.text_field :color %></label><br>
+    <label>Name<%= f.text_field :name %>
+    </label><br>
+    <label>Breed<%= f.text_field :breed %>
+    </label><br>
+    <label>Color<%= f.text_field :color %>
+    </label><br>
     <div><%= f.label :female, "Gender" %>
       <%= f.radio_button :female, true %>
       <%= f.label :female_true, "Female" %>
@@ -21,32 +26,29 @@
       <%= f.radio_button :spayed_neutered, false %>
       <%= f.label :spayed_neutered_false, "No" %>
     </div>
-    <label>Birth Year<%= f.date_field :birth_year %><br>
-    <label>Feeding Instructions<br><%= f.text_area :feeding, rows: 10, cols: 50%></label><br>
-    <label>Medication Notes<br><%= f.text_area :medications, rows: 10, cols: 50 %></label><br>
-    <label>Vaccinations Last Date<br><%= f.date_field :vaccinations %><br>
-    <label>Vaccination / Medical Notes<br><%= f.text_area :vaccination_medical_notes, rows: 10, cols: 50 %></label><br>
-    <label>Flea / Tick Prevention Last Date<br><%= f.date_field :flea_tick_application %><br>
-    <label>Temperament<br><%= f.text_area :temperament, rows: 10, cols: 50 %></label><br>
+    <label>Birth Year<%= f.date_field :birth_year %>
+    </label><br>
+    <label>Feeding Instructions<br>
+      <%= f.text_area :feeding, rows: 10, cols: 50 %>
+    </label><br>
+    <label>Medication Notes<br>
+      <%= f.text_area :medications, rows: 10, cols: 50 %>
+    </label><br>
+    <label>Vaccinations Last Date<br>
+      <%= f.date_field :vaccinations %>
+    </label><br>
+    <label>Vaccination / Medical Notes<br>
+      <%= f.text_area :vaccination_medical_notes, rows: 10, cols: 50 %>
+    </label><br>
+    <label>Flea / Tick Prevention Last Date<br>
+      <%= f.date_field :flea_tick_application %>
+    </label><br>
+    <label>Temperament<br>
+      <%= f.text_area :temperament, rows: 10, cols: 50 %>
+    </label><br>
       <%= render partial: 'category_picker' %>
-    <label>Additional Notes<br><%= f.text_area :notes, rows: 10, cols: 50 %></label><br>
+    <label>Additional Notes<br>
+      <%= f.text_area :notes, rows: 10, cols: 50 %>
+    </label><br>
     <input type="submit" name="submit" value="Submit!">
 <% end %>
-
-
-
-
-<!-- t.string   :name
-t.integer  :user_id
-t.string   :breed
-t.string   :color
-t.boolean  :female
-t.boolean  :spayed_neutered
-t.integer  :birth_year
-t.text     :feeding
-t.text     :medications
-t.date     :vaccinations
-t.text     :vaccination_medical_notes
-t.date     :flea_tick_application
-t.text     :temperament
-t.text     :notes -->
