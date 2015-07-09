@@ -1,7 +1,10 @@
 <h1>Categories</h1>
 <ul>
   <% @categories.each do |category| %>
-      <li><%= link_to category.pet_type, category %>&nbsp;<%= button_to 'X', category, method: :delete, data: { confirm: 'Are you sure?'} %> </li>
+      <li><%= link_to category.pet_type, category %>
+        &nbsp;
+        <%= button_to 'Delete', category, method: :delete, data: { confirm: 'Are you sure?'} %>
+      </li>
   <% end %>
 </ul>
 <%= link_to "New Category", "/categories/new" %>

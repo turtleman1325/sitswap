@@ -1,5 +1,7 @@
 <% Category.all.each do |category| %>
-  <label><%= category.name %>
+  <label>
+    <%= category.name %>
     <%= check_box_tag category.name, category.id, @pet.categories.include?(category), name: 'categories[]' %>
-  </label><br>
+  </label>
+  <br>
 <% end %>

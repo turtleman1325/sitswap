@@ -26,7 +26,7 @@
       <%= f.radio_button :spayed_neutered, false %>
       <%= f.label :spayed_neutered_false, "No" %>
     </div>
-    <label>Birth Year<%= f.date_field :birth_year %>
+    <label>Birth Year<%= f.text_field :birth_year %>
     </label><br>
     <label>Feeding Instructions<br>
       <%= f.text_area :feeding, rows: 10, cols: 50 %>
@@ -35,13 +35,13 @@
       <%= f.text_area :medications, rows: 10, cols: 50 %>
     </label><br>
     <label>Vaccinations Last Date<br>
-      <%= f.date_field :vaccinations %>
+      <%= f.text_field :vaccinations, class: 'date_picker' %>
     </label><br>
     <label>Vaccination / Medical Notes<br>
       <%= f.text_area :vaccination_medical_notes, rows: 10, cols: 50 %>
     </label><br>
     <label>Flea / Tick Prevention Last Date<br>
-      <%= f.date_field :flea_tick_application %>
+      <%= f.text_field :flea_tick_application, class: 'date_picker' %>
     </label><br>
     <label>Temperament<br>
       <%= f.text_area :temperament, rows: 10, cols: 50 %>
@@ -50,5 +50,5 @@
     <label>Additional Notes<br>
       <%= f.text_area :notes, rows: 10, cols: 50 %>
     </label><br>
-    <input type="submit" name="submit" value="Submit!">
+    <input type="submit" name="submit" value="Done!">
 <% end %>
