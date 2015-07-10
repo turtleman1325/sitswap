@@ -40,4 +40,7 @@
 <%= link_to 'Pets', '/pets' %>
 &nbsp;
 &nbsp;
-<%= link_to 'Edit', "/pets/#{@pet.id}/edit" %>
+<%= link_to 'Edit', edit_pet_path(@pet) %>
+&nbsp;
+&nbsp;
+<%= link_to 'Delete', pet_path(@pet), method: 'delete' %>

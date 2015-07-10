@@ -8,41 +8,45 @@
     </ul>
 <% end %>
 <%= form_for @pet do |f| %>
-    <label>Name<%= f.text_field :name %>
+    <label>Name<br>
+      <%= f.text_field :name %>
     </label><br>
-    <label>Breed<%= f.text_field :breed %>
+    <label>Breed<br>
+      <%= f.text_field :breed %>
     </label><br>
-    <label>Color<%= f.text_field :color %>
-    </label><br>
+    <label>Color<br>
+      <%= f.text_field :color %>
+    </label><br><br>
     <div><%= f.label :female, "Gender" %>
       <%= f.radio_button :female, true %>
       <%= f.label :female_true, "Female" %>
       <%= f.radio_button :female, false %>
       <%= f.label :female_false, "Male" %>
-    </div>
+    </div><br>
     <div><%= f.label :spayed_neutered, "Spayed / Neutered" %>
       <%= f.radio_button :spayed_neutered, true %>
       <%= f.label :spayed_neutered_true, "Yes" %>
       <%= f.radio_button :spayed_neutered, false %>
       <%= f.label :spayed_neutered_false, "No" %>
-    </div>
-    <label>Birth Year<%= f.text_field :birth_year %>
-    </label><br>
+    </div><br>
+    <label>Birth Year<br>
+      <%= f.text_field :birth_year %>
+    </label><br><br>
     <label>Feeding Instructions<br>
       <%= f.text_area :feeding, rows: 10, cols: 50 %>
     </label><br>
     <label>Medication Notes<br>
       <%= f.text_area :medications, rows: 10, cols: 50 %>
-    </label><br>
+    </label><br><br>
     <label>Vaccinations Last Date<br>
       <%= f.text_field :vaccinations, class: 'date_picker' %>
-    </label><br>
+    </label><br><br>
     <label>Vaccination / Medical Notes<br>
       <%= f.text_area :vaccination_medical_notes, rows: 10, cols: 50 %>
-    </label><br>
+    </label><br><br>
     <label>Flea / Tick Prevention Last Date<br>
       <%= f.text_field :flea_tick_application, class: 'date_picker' %>
-    </label><br>
+    </label><br><br>
     <label>Temperament<br>
       <%= f.text_area :temperament, rows: 10, cols: 50 %>
     </label><br>
@@ -50,5 +54,6 @@
     <label>Additional Notes<br>
       <%= f.text_area :notes, rows: 10, cols: 50 %>
     </label><br>
+    <%= render partial: 'category_picker' %>
     <input type="submit" name="submit" value="Done!">
 <% end %>
