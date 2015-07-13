@@ -8,7 +8,10 @@
     </ul>
 <% end %>
 <%= simple_form_for @pet do |f| %>
-  <%= f.association :category, label_method: :pet_type, include_blank: false %>
+  <%= f.association :category,
+        label_method: :pet_type,
+        include_blank: false,
+        collection: Category.order(:pet_type) %>
   <%= f.input :name %>
     <label>Breed<br>
       <%= f.text_field :breed %>

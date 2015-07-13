@@ -1,4 +1,4 @@
-<% Category.all.each do |category| %>
+<% Category.all.order(:pet_type) do |category| %>
   <label>
     <%= category.pet_type %>
     <%= check_box_tag category.pet_type, category.id, @pet.category == category, name: 'categories[]' %>
