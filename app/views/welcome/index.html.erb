@@ -5,3 +5,7 @@
 <br>
 <br>
 <%= link_to image_tag('https://readwithmeapp.com/images/sign-in-with-google.png', width: 200, height: 40), user_omniauth_authorize_path(:google_oauth2) %>
+
+<%= link_to('Login', new_user_session_path) %>
+
+<%= link_to('Sign up', new_user_registration_path) %>
